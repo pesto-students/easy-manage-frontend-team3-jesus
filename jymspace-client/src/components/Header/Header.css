@@ -1,0 +1,53 @@
+.header{
+    
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+}
+
+
+.header-menu{
+    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    color: white;
+   align-items: center;
+
+    
+
+}
+
+.header-menu>li:hover{
+    color: var(--light-blue);
+    cursor: pointer;
+}
+
+.header-menu>li{
+    position: relative;
+  color: white;
+}
+
+.header-menu>li::after{
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-blue);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+
+
+}
+.header-menu>li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
