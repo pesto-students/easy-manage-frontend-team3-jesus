@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       <div className="right-h">
-        <button className="btn-sign">SIGN UP</button>
+        <button className="btn-sign">SIGN IN</button>
        
       </div>
       <img src={hero_Image} alt="" className='hero-image' />
