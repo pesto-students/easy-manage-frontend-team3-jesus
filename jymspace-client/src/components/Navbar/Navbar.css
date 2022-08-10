@@ -1,4 +1,4 @@
-.header{
+.navbar{
     
     display: flex;
     justify-content: space-between;
@@ -11,29 +11,31 @@
 }
 
 
-.header-menu{
+.navbar-menu{
     position: relative;
     list-style: none;
     display: flex;
     gap: 4rem;
     color: white;
    align-items: center;
+   margin-right: 2rem;
 
     
 
 }
 
-.header-menu>li:hover{
+.links:hover{
     color: var(--light-blue);
     cursor: pointer;
 }
 
-.header-menu>li{
+.links{
     position: relative;
+    text-decoration: none;
   color: white;
 }
 
-.header-menu>li::after{
+.links::after{
     content: '';
   position: absolute;
   width: 100%;
@@ -47,7 +49,7 @@
 
 
 }
-.header-menu>li:hover::after{
+.links:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }

@@ -1,20 +1,18 @@
-
-
-import Hero from'./components/Hero/Hero'
-import './App.css';
-import Features from './components/Features/Features';
-import Reasons from './components/Reasons/Reasons';
-import Plans from './components/Plans/Plans';
-import Footer from './components/Footer/Footer';
+import { Route, Routes,  } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Pages/Home";
+import About from "./components/Pages/About/About";
+import Signin from './components/Signin/Signin';
 
 function App() {
   return (
     <div className="App">
-      <Hero/>
-      <Features/>
-      <Reasons/>
-      <Plans/>
-      <Footer/>
+      
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route  path="/about" element={<About />} />
+        <Route  path="/Signin" element={<Signin />} />
+      </Routes>
      
     </div>
   );
