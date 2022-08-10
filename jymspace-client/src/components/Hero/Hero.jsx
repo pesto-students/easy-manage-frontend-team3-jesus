@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../Header/Header";
 import hero_Image from "../../assets/hero.png"
 import "./Hero.css";
+import Navbar from '../../components/Navbar/Navbar'
 
 const Hero = () => {
   return (
     <div className="hero">
       <div className="left-h">
-        <Header />
+      <Navbar/>
         {/* The JYM SPACE */}
         <div className="the-jym-space">
           <div></div>
@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       <div className="right-h">
-        <button className="btn-sign">SIGN IN</button>
+      <Link to="/Sign In"><button className="btn-sign">SIGN IN</button>
        
       </div>
       <img src={hero_Image} alt="" className='hero-image' />
