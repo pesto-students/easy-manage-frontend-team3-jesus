@@ -2,9 +2,6 @@ import React from "react";
 import "./Plans.css";
 import { plansData } from "../../data/plansData";
 import checkmark from "../../assets/tick-mark.png";
-import free from "../../assets/free.svg";
-import dumbell from "../../assets/dumbell.svg";
-import crown from "../../assets/crown.svg";
 
 const Plans = () => {
   return (
