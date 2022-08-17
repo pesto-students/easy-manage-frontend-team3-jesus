@@ -1,18 +1,14 @@
-import { Route, Routes,  } from "react-router-dom";
+
 import "./App.css";
-import Home from "./components/Pages/Home";
-import About from "./components/Pages/About/About";
-import Signin from './components/Signin/Signin';
+import AppRouter from "./appRouter/AppRouter";
+
 
 function App() {
   return (
     <div className="App">
       
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route  path="/about" element={<About />} />
-        <Route  path="/Signin" element={<Signin />} />
-      </Routes>
+      <AppRouter/>
+    
      
     </div>
   );

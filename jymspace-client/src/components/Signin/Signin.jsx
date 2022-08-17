@@ -1,9 +1,18 @@
 import React from 'react'
 import './Signin.css'
+import Navbar from "../Navbar/Navbar"
+import Footer from '../Footer/Footer'
 
 const Signin = () => {
   return (
-    <div>SignIn</div>
+    
+    <div>
+     <div><Navbar/></div>
+
+      <div>SignIn</div>
+      
+      <div><Footer/></div>
+      </div>
   )
 }
 
