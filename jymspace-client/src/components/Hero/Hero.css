@@ -1,0 +1,137 @@
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+}
+.left-h{
+    padding: 0.5rem;
+    padding-top: 0.5rem;
+    flex: 2;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    
+}
+.right-h{
+    
+    position: relative;
+    flex: 1;
+    background-image: var(--gradient);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    
+    }
+
+.the-jym-space{
+    margin-top: 4rem;
+    background-image: var(--gradient);
+    border-radius: 15px;
+    width: fit-content;
+    padding: 15px 80px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    margin-left:2rem;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+
+}
+
+.the-jym-space>span{
+    z-index: 2;
+}
+.the-jym-space>div{
+    position: absolute;
+    background-color: var(--black);
+    width: 5rem;
+    height: 80%;
+    left: 8px;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-left: 2rem;
+    line-height: 6rem;
+}
+
+
+.hero-text>div:nth-of-type(3){
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 2px;
+    width: 70%;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+    
+
+}
+.hero-text>div:nth-of-type(4){
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+
+.btn {
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    border-radius: 15px;
+    color: #000000;
+    font-size: 15px;
+    background: #20BF55;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-style: none;
+    z-index: 8;
+  }
+  
+  .btn:hover {
+    background: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.hero-button{
+    margin: 0 0 3rem 0
+}
+.btn-sign {
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+    background: #000;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-style: none;
+  }
+  
+  .btn-sign:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .right-h>.btn-sign{
+    position: absolute;
+     right: 8rem;top:2rem
+  }
+  .hero-image{
+    position: absolute;
+    left: 45rem;
+    top: 5rem;
+   width: 50%
+}
