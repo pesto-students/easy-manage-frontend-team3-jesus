@@ -22,7 +22,7 @@
 }
 .plan{
     display: flex;
-   flex: 1;
+    flex: 1;
     flex-direction: column;
     background-color: var(--black);
     color: var(--white);

@@ -1,9 +1,5 @@
 import React from "react";
 import "./Features.css";
-import manage_user from "../../assets/manage.svg";
-import community from "../../assets/community.svg";
-import insights from "../../assets/insights.svg";
-import payment from "../../assets/payment.svg";
 import { featuresData } from "../../data/featuresData";
 
 const Features = () => {

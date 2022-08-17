@@ -4,6 +4,7 @@ import Navbar from '../../Navbar/Navbar'
 import Footer from '../../Footer/Footer'
 
 const About = () => {
+  
   return <div>
     <Navbar />
     <Footer />
