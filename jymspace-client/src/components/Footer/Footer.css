@@ -1,0 +1,44 @@
+.footer{
+    background-color: var(--black);
+}
+
+.footer .social-links{
+    text-align: center;
+    padding-top: 2.5rem;
+
+
+    
+}
+
+.footer .social-links>img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    
+}
+.footer>hr{
+    border: 1px solid var(--light-green);
+}
+.list {
+    list-style: none;
+    color: var(--white);
+    display: flex;
+    justify-content:center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.list>li{   
+    margin: 0 1rem;
+}
+.list>li:hover{
+    color: var(--light-green);
+    cursor: pointer;
+}
+.copyright{
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
