@@ -1,14 +1,15 @@
-import React from "react";
-import "./Plans.css";
-import { plansData } from "../../Data/plansData";
-import checkmark from "../../assets/tick-mark.png";
+import React from 'react'
+import Footer from '../../Footer/Footer';
+import Navbar from '../../Navbar/Navbar';
+import { plansData } from '../../../Data/plansData';
+import checkmark from "../../../assets/tick-mark.png";
 
+import './Pricing.css'
 
-const Plans = () => {
-  
-
-  
+const Pricing = () => {
   return (
+    <>
+    <Navbar/>
     <div className="plans-container" >
       <div className="programs-header">
         <span className="stroke-text header-text">Start Your</span>
@@ -37,7 +38,10 @@ const Plans = () => {
         ))}
       </div>
     </div>
-  );
-};
+    <Footer/>
+    
+    </>
+  )
+}
 
-export default Plans;
+export default Pricing
