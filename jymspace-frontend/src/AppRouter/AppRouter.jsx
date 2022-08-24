@@ -4,6 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../Utility/ErrorBoundary";
 import AboutUs from "../components/Pages/AboutUs/AboutUs";
 const Home = lazy(() => import ("../components/Pages/Home/Home"));
+const Pricing = lazy(() => import ("../components/Pages/Pricing/Pricing"));
 
 
 const AppRouter = () => {
@@ -14,6 +15,7 @@ const AppRouter = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route  path="/AboutUs" element={<AboutUs/>} />
+        <Route  path="/Pricing" element={<Pricing/>} />
       </Routes>
       </Suspense>
       </ErrorBoundary>
