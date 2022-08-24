@@ -3,9 +3,13 @@ import "./Plans.css";
 import { plansData } from "../../Data/plansData";
 import checkmark from "../../assets/tick-mark.png";
 
+
 const Plans = () => {
+  
+
+  
   return (
-    <div className="plans-container">
+    <div className="plans-container" >
       <div className="programs-header">
         <span className="stroke-text header-text">Start Your</span>
         <span className="stroke-text-green header-text"> Journey </span>
