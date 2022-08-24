@@ -2,7 +2,7 @@ import {lazy, Suspense} from "react";
 import { Route, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../Utility/ErrorBoundary";
-import AboutUs from "../components/Pages/AboutUs/AboutUs";
+const AboutUs = lazy(() => import ("../components/Pages/AboutUs/AboutUs"));
 const Home = lazy(() => import ("../components/Pages/Home/Home"));
 
 
