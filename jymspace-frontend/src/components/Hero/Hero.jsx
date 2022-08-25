@@ -2,6 +2,7 @@ import React from "react";
 import hero_Image from "../../assets/hero.png";
 import "./Hero.css";
 import Navbar from "../../components/Navbar/Navbar";
+import { Link} from "react-router-dom";
 
 
 const Hero = () => {
@@ -41,7 +42,7 @@ const Hero = () => {
       </div>
 
       <div className="right-h">
-        <li className="btn-sign">SIGN IN</li>
+        <Link to="/SignIn" className='btn-sign'>SIGN IN</Link>
       </div>
       <img src={hero_Image} alt="" className="hero-image" />
     </div>

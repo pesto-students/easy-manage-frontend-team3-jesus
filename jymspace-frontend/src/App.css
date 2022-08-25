@@ -4,6 +4,8 @@
   --gradient: linear-gradient(180deg, rgba(32,191,85,1) 0%, rgba(1,186,239,1) 100%);
   --light-green:#20BF55; 
   --light-blue: #01baef;
+  --google-blue: #4285f4;
+  --button-active-blue: #1669F2;
 }
 
 .App {
