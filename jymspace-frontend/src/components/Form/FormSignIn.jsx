@@ -2,7 +2,7 @@ import React from "react";
 import validate from "../Form/ValidateInfo";
 import useForm from "../Form/UseForm";
 import google from "../../assets/google.png";
-import "./Form.css";
+import "./FormS.css";
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
