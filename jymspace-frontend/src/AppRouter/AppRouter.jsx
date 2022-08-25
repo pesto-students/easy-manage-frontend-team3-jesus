@@ -3,8 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../Utility/ErrorBoundary";
 import AboutUs from "../components/Pages/AboutUs/AboutUs";
-import SignIn from "../components/Pages/SignIn/SignIn";
-
+const SignIn = lazy (() => import ("../components/Pages/SignIn/SignIn"));
 const Home = lazy(() => import("../components/Pages/Home/Home"));
 const Pricing = lazy(() => import("../components/Pages/Pricing/Pricing"));
 
