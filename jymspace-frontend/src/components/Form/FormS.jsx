@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './Form.css';
-import FormSignIn from '../Form/FormSignIn';
+import './FormS.css';
+import FormSignIn from './FormSignIn';
 import SignIn from '../../assets/SignIn.jpg';
 
 
-const Form = () => {
+const FormS= () => {
   const [ setIsSubmitted] = useState(false);
 
   function submitForm() {
@@ -25,4 +25,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormS;

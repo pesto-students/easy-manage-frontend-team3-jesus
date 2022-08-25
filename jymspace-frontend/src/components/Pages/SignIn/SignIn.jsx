@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from "../../Navbar/Navbar"
 import Footer from "../../Footer/Footer"
-import Form from "../../Form/Form"
+import FormS from "../../Form/FormS"
 
 const Signin = () => {
   return (
     <div>
      <Navbar/>
-     <Form/>
+     <FormS/>
      <Footer/>
     </div>
   )
