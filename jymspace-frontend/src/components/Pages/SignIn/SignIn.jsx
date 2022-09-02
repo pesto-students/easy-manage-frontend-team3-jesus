@@ -1,16 +1,20 @@
-import React from 'react'
-import Navbar from "../../Navbar/Navbar"
-import Footer from "../../Footer/Footer"
-import FormS from "../../Form/FormS"
 
-const Signin = () => {
+import React from "react";
+import Navbar from "../../Navbar/Navbar";
+import Footer from "../../Footer/Footer";
+import FormSignIn from "../../Form/FormSignIn";
+
+
+
+const SignIn = () => {
   return (
     <div>
-     <Navbar/>
-     <FormS/>
-     <Footer/>
-    </div>
-  )
-}
 
-export default Signin
+      <Navbar />
+      <FormSignIn/>
+      <Footer />
+    </div>
+  );
+};
+
+export default SignIn;

@@ -1,63 +1,91 @@
 import React from "react";
-import validate from "../Form/ValidateInfo";
-import useForm from "../Form/UseForm";
-import google from "../../assets/google.png";
-import "./FormS.css";
+import SignIn from "../../assets/SignIn.jpg";
+import "./FormSignIn.css";
+import { useFormik } from "formik";
+import { signInSchema } from "../Schemas/SignInSchemas";
 
-const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
-    submitForm,
-    validate
-  );
+const FormSignIn = () => {
+  const initialValues = {
+    email: "",
+    password: "",
+  };
+  const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
+    useFormik({
+      initialValues,
+      validationSchema: signInSchema,
+      validateOnChange:true,
+      validateOnBlur: false,
+      //// By disabling validation onChange and onBlur formik will validate on submit.
+      onSubmit: (values, action) => {
+        //// to get rid of all the values after submitting the form
+        action.resetForm();
+      },
+    });
 
+  console.log(errors);
   return (
-    <div className="form-content-right">
-      <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>SIGN IN INTO JYM SPACE HERE</h1>
-
-        <div className="form-inputs">
-          <label className="form-label">Email</label>
-          <input
-            className="form-input"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={values.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p>{errors.email}</p>}
-        </div>
-        <div className="form-inputs">
-          <label className="form-label">Password</label>
-          <input
-            className="form-input"
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            value={values.password}
-            onChange={handleChange}
-          />
-          {errors.password && <p>{errors.password}</p>}
-        </div>
-
-        <button className="form-input-btn" type="submit">
-          Sign up
-        </button>
-        <span className="form-input-login">
-          Forgot Password ? <a href="www.facebook.com">click here</a>
-        </span>
-        <span className="or">OR</span>
-        <div className="google-btn">
-          <div className="google-wrapper">
-            <img src={google} alt="google" className="google-icon" />
+    <div>
+      <div className="modal">
+        <div className="modal-container">
+          <div className="modal-left">
+            <h1 className="modal-title">SIGN IN INTO JYM SPACE</h1>
+            <form>
+              <label htmlFor="email" className="input-label">
+                Email
+              </label>
+              <div className="input-block">
+                <input
+                  type="email"
+                  autoComplete="off"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email here"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.email && touched.email ? (
+                  <p className="form-error">{errors.email}</p>
+                ) : null}
+              </div>
+              <label htmlFor="password" className="input-label">
+                Password
+              </label>
+              <div className="input-block">
+                <input
+                  type="password"
+                  autoComplete="off"
+                  name="password"
+                  id="password"
+                  placeholder="Enter Your Password here"
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.password && touched.password ? (
+                  <p className="form-error">{errors.password}</p>
+                ) : null}
+              </div>
+              <p className="modal-forgot">
+                Forgot Password
+                <a href="!#" className="modal-link">
+                  click here
+                </a>
+              </p>
+              <div className="modal-buttons">
+                <button className="input-button" type="submit">
+                  Sign In
+                </button>
+              </div>
+            </form>
           </div>
-          <p className="btn-text">
-            <b>Sign in with google</b>
-          </p>
+          <div className="modal-right">
+            <img src={SignIn} alt="" />
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
 
-export default FormSignup;
+export default FormSignIn;
