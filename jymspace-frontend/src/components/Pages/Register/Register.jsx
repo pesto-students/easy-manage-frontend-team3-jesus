@@ -4,6 +4,7 @@ import Footer from "../../Footer/Footer"
 
 
 
+
 const Register = () => {
   return (
     <div>
