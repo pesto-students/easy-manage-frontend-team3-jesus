@@ -35,7 +35,7 @@ const Hero = () => {
             <span>We welcome you to the future of gyms!</span>
             {/*HERO BUTTON*/}
             <div className="hero-button">
-            <Link to="/ContactUs" className='btn'>Register</Link>
+            <Link to="/ContactUs" className='btn'>GET A QUOTE &#8594;</Link>
             </div>
           </div>
         </div>
