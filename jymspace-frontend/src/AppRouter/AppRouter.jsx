@@ -5,9 +5,11 @@ import ErrorFallback from "../Utility/ErrorBoundary";
 import AboutUs from "../components/Pages/AboutUs/AboutUs";
 import SignIn from "../components/Pages/SignIn/SignIn";
 import SuperUser from "../components/Pages/SuperUser/SuperUser";
+import SuperUserDashboard from "../components/Pages/SuperUserDashBoard/SuperUserDashBoard";
 const Home = lazy(() => import("../components/Pages/Home/Home"));
 const Pricing = lazy(() => import("../components/Pages/Pricing/Pricing"));
 const ContactUs = lazy(() => import("../components/Pages/ContactUs/ContactUs"));
+
 
 
 
@@ -23,6 +25,8 @@ const AppRouter = () => {
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/SuperUser" element={<SuperUser/>} />
+            <Route path="/SuperUserDashboard" element={<SuperUserDashboard/>} />
+
             
             
           </Routes>
