@@ -6,6 +6,7 @@ import AboutUs from "../components/Pages/AboutUs/AboutUs";
 import SignIn from "../components/Pages/SignIn/SignIn";
 import SuperUser from "../components/Pages/SuperUser/SuperUser";
 import SuperUserDashboard from "../components/Pages/SuperUserDashBoard/SuperUserDashBoard";
+import Register from "../components/Pages/Register/Register"
 const Home = lazy(() => import("../components/Pages/Home/Home"));
 const Pricing = lazy(() => import("../components/Pages/Pricing/Pricing"));
 const ContactUs = lazy(() => import("../components/Pages/ContactUs/ContactUs"));
@@ -26,6 +27,7 @@ const AppRouter = () => {
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/SuperUser" element={<SuperUser/>} />
             <Route path="/SuperUserDashboard" element={<SuperUserDashboard/>} />
+            <Route path="/Register" element={<Register/>} />
 
             
             
