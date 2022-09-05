@@ -33,29 +33,31 @@ const FormRegister = () => {
       <div className="modal">
         <div className="modal-container">
           <div className="modal-left">
-            <h1 className="modal-title">SIGN IN INTO JYM SPACE</h1>
+            <h1 className="modal-title">REGISTER TO JYM SPACE</h1>
            
               <form className="modal-form">
-                
-                  <label htmlFor="name" className="input-label">
-                    Full name (owner)
-                  </label>
-                  <div className="input-block">
-                    <input
-                      type="text"
-                      autoComplete="off"
-                      name="name"
-                      id="name"
-                      placeholder="Enter your name here"
-                      value={values.name}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                    {errors.name && touched.name ? (
-                      <p className="form-error">{errors.name}</p>
-                    ) : null}
+                <div className="form-group">
+                  <div className="col">
+                    <label htmlFor="name" className="input-label">
+                        Full name (owner)
+                    </label>
+                    <div className="input-block">
+                        <input
+                          type="text"
+                          autoComplete="off"
+                          name="name"
+                          id="name"
+                          placeholder="Enter your name here"
+                          value={values.name}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                        />
+                        {errors.name && touched.name ? (
+                          <p className="form-error">{errors.name}</p>
+                        ) : null}
+                    </div>
                   </div>
-
+                  <div className="col">
                   <label htmlFor="gym name" className="input-label">
                     Gym Name
                   </label>
@@ -74,7 +76,11 @@ const FormRegister = () => {
                       <p className="form-error">{errors.gym_name}</p>
                     ) : null}
                   </div>
-
+                  </div>
+                </div>
+                 
+                <div className="form-group">
+                  <div className="col">
                   <label htmlFor="email" className="input-label">
                     Email
                   </label>
@@ -93,7 +99,9 @@ const FormRegister = () => {
                       <p className="form-error">{errors.email}</p>
                     ) : null}
                   </div>
+                  </div>
 
+                  <div className="col">
                   <label htmlFor="password" className="input-label">
                     Password
                   </label>
@@ -112,6 +120,10 @@ const FormRegister = () => {
                       <p className="form-error">{errors.password}</p>
                     ) : null}
                   </div>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <div className="col">
                   <label htmlFor="address" className="input-label">
                     Address
                   </label>
@@ -130,6 +142,8 @@ const FormRegister = () => {
                       <p className="form-error">{errors.address}</p>
                     ) : null}
                   </div>
+                  </div>
+                  <div className="col">
                   <label htmlFor="city" className="input-label">
                     City
                   </label>
@@ -148,6 +162,10 @@ const FormRegister = () => {
                       <p className="form-error">{errors.city}</p>
                     ) : null}
                   </div>
+                  </div>
+                </div>
+                 <div className="form-group">
+                  <div className="col">
                   <label htmlFor="pin code" className="input-label">
                     Pin code
                   </label>
@@ -166,6 +184,9 @@ const FormRegister = () => {
                       <p className="form-error">{errors.city}</p>
                     ) : null}
                   </div>
+                  </div>
+                  <div className="col">
+
                   <label htmlFor="State name" className="input-label">
                     State
                   </label>
@@ -184,6 +205,8 @@ const FormRegister = () => {
                       <p className="form-error">{errors.state_name}</p>
                     ) : null}
                   </div>
+                  </div>
+                </div>
                   <p className="modal-forgot">
                     Forgot Password
                     <a href="!#" className="modal-link">

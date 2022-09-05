@@ -23,7 +23,7 @@
 .modal-container {
   margin-bottom: 60rem;
   display: flex;
-  max-width: 80vw;
+  max-width: 90vw;
   border-radius: 10px;
   overflow: hidden;
   position: absolute;
@@ -127,7 +127,12 @@
   color: gray;
 }
 
-
+.form-group{
+  display: flex;
+}
+.col{
+  padding:12px;
+}
 
 @media (max-width: 750px) {
   .modal-container {
