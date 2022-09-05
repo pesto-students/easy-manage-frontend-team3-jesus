@@ -3,9 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../Utility/ErrorBoundary";
 import AboutUs from "../components/Pages/AboutUs/AboutUs";
+import SignIn from "../components/Pages/SignIn/SignIn";
 const Home = lazy(() => import("../components/Pages/Home/Home"));
 const Pricing = lazy(() => import("../components/Pages/Pricing/Pricing"));
 const ContactUs = lazy(() => import("../components/Pages/ContactUs/ContactUs"));
+
+
 
 const AppRouter = () => {
   return (
@@ -16,10 +19,12 @@ const AppRouter = () => {
             <Route exact path="/" element={<Home />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/Pricing" element={<Pricing />} />
+            <Route path="/SignIn" element={<SignIn />} />
             <Route path="/ContactUs" element={<ContactUs />} />
+            
           </Routes>
         </Suspense>
-      </ErrorBoundary>
+      </ErrorBoundary>          
     </div>
   );
 };
