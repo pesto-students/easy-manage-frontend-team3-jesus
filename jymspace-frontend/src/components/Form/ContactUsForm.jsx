@@ -1,12 +1,15 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import ContactUs from "../../assets/ContactUs.jpg";
 import "./ContactUsForm.css";
 const ContactUsForm = () => {
   return (
     <div>
       <Navbar/>
-      <div className="container">
+      <div className="modal">
+        <div className="modal-container">
+      <div className="modal-left">
         <form id="contact" action="" method="post">
           <h3>Get a Quote here</h3>
           <h4>Contact us for custom quote</h4>
@@ -61,6 +64,11 @@ const ContactUsForm = () => {
             </button>
           </fieldset>
         </form>
+      </div>
+      <div className="modal-right">
+      <img src={ContactUs} alt="" />
+      </div>
+      </div>
       </div>
       <Footer/>
     </div>
