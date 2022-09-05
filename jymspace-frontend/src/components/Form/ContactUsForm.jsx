@@ -7,9 +7,9 @@ const ContactUsForm = () => {
   return (
     <div>
       <Navbar/>
-      <div className="modal">
-        <div className="modal-container">
-      <div className="modal-left">
+      <div className="contact-form">
+        <div className="contact-container">
+      <div className="left-contact">
         <form id="contact" action="" method="post">
           <h3>Get a Quote here</h3>
           <h4>Contact us for custom quote</h4>
@@ -65,7 +65,7 @@ const ContactUsForm = () => {
           </fieldset>
         </form>
       </div>
-      <div className="modal-right">
+      <div className="right-contact">
       <img src={ContactUs} alt="" />
       </div>
       </div>
