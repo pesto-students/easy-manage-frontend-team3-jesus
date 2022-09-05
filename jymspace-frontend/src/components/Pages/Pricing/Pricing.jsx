@@ -1,23 +1,24 @@
-import React from "react";
-import "./Plans.css";
-import { plansData } from "../../Data/plansData";
-import checkmark from "../../assets/tick-mark.png";
+import React from 'react'
+import Footer from '../../Footer/Footer';
+import Navbar from '../../Navbar/Navbar';
+import { plansData } from '../../../Data/plansData';
+import checkmark from "../../../assets/tick-mark.png";
 
+import './Pricing.css'
 
-const Plans = () => {
-  
-
-  
+const Pricing = () => {
   return (
-    <div className="plans-container" >
-      <div className="programs-header">
+    <>
+    <Navbar/>
+    <div className="pricing-container" >
+      <div className="pricing-programs-header">
         <span className="stroke-text header-text">Start Your</span>
         <span className="stroke-text-green header-text"> Journey </span>
         <span className="stroke-text header-text">With Us </span>
       </div>
-      <div className="plans">
+      <div className="pricing">
         {plansData.map((plan, i) => (
-          <div className="plan" key={i}>
+          <div className="pricing-plan" key={i}>
             <span>{plan.icon}</span>
             <span>{plan.name}</span>
             <span>${plan.price}</span>
@@ -37,7 +38,10 @@ const Plans = () => {
         ))}
       </div>
     </div>
-  );
-};
+    <Footer/>
+    
+    </>
+  )
+}
 
-export default Plans;
+export default Pricing;

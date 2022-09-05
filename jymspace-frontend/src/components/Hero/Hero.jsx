@@ -2,7 +2,8 @@ import React from "react";
 import hero_Image from "../../assets/hero.png";
 import "./Hero.css";
 import Navbar from "../../components/Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+
 
 const Hero = () => {
   return (
@@ -33,17 +34,15 @@ const Hero = () => {
           <div>
             <span>We welcome you to the future of gyms!</span>
             {/*HERO BUTTON*/}
-           {/* <div className="hero-button">
-              <button className="btn">GET A QUOTE &#8594;</button>
-  </div> */}
+            <div className="hero-button">
+            <Link to="/ContactUs" className='btn'>GET A QUOTE &#8594;</Link>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="right-h">
-        <Link to="/Signin" className="btn-sign">
-          SIGN IN
-        </Link>
+        <Link to="/SignIn" className='btn-sign'>SIGN IN</Link>
       </div>
       <img src={hero_Image} alt="" className="hero-image" />
     </div>
