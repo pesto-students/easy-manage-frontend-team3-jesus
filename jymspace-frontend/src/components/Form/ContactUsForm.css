@@ -1,9 +1,51 @@
 
-.container {
-    max-width: 400px;
+.modal {
+    padding:40rem;
+    background-image: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+  }
+  .modal-container {
+   
+    display: flex;
+    max-width: 65%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: 0.3s;
+    background: black;
+  }
+.container-left {
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
     position: relative;
+  }
+  .modal-left {
+    padding: 60px 30px 20px;
+    background: black;
+    flex: 1.5;
+    transition-duration: 0.5s;
+    opacity: 1;
+  }
+  .modal-right {
+    flex: 2;
+    font-size: 0;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  .modal-right img {
+    width: 100%;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    transform: scale(1.1);
+  
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition-duration: 1.2s;
   }
   
   #contact input[type="text"],
@@ -105,9 +147,7 @@
   
  
   #plans{
-    width: 21.9rem;
+    width: 26rem;
     height: 2.5rem;
   }
-  .null{
-    
-  }
+  
