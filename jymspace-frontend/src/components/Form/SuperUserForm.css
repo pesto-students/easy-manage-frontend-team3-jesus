@@ -1,15 +1,5 @@
-.container {
-    position: fixed;
-    top: 5;
-    left: 0;
-    right: 0;
-    bottom: 5;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .modal {
+
+  .superUser{
     padding-top: 50rem;
     width: 100%;
     height: 60px;
@@ -20,7 +10,7 @@
     justify-content: center;
     transition: 0.4s;
   }
-  .modal-container {
+  .superUser-container {
     margin-bottom: 45rem;
     display: flex;
     max-width: 60vw;
@@ -31,33 +21,28 @@
     transition-duration: 0.3s;
     background: black;
   }
-  .modal-title {
+  .superUser-title {
     margin-bottom: 2rem;
     text-align: center;
     font-weight: 700;
     color: var(--light-green);
   }
-  .form-error {
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-   font-size: 1rem;
-    color: #b22b27;
-  }
   
-  .modal-left {
+  
+  .superUser-left {
     padding: 60px 30px 20px;
     background: black;
     flex: 1.5;
     transition-duration: 0.5s;
     opacity: 1;
   }
-  .modal-right {
+  .superUser-right {
     flex: 2;
     font-size: 0;
     transition: 0.3s;
     overflow: hidden;
   }
-  .modal-right img {
+  .superUser-right img {
     width: 75%;
     margin-left: 4rem;
     transform: scale(1.1);
@@ -68,20 +53,20 @@
     object-fit: cover;
     transition-duration: 1.2s;
   }
-  .modal.is-open .modal-left {
+  .modal.is-open .superUser-left {
     transform: translateY(0);
     opacity: 1;
     transition-delay: 0.1s;
   }
-  .modal-buttons {
+  .superUser-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .input-button {
-    margin-top: 10rem;
-    margin-left: 8rem;
+  .superUser-button {
+    margin-top: 8rem;
+    margin-left: 5rem;
     position: absolute;
     padding: 0.5rem 3rem;
     outline: none;
@@ -93,10 +78,10 @@
     transition: 0.3s;
     cursor: pointer;
   }
-  .input-button:hover {
+  .superUser-button:hover {
     background: white;
   }
-  .input-label {
+  .superUser-label {
     margin-left: 1.5rem;
     font-size: 1rem;
   
@@ -105,7 +90,7 @@
     color: white;
     transition: 0.3s;
   }
-  .input-block {
+  .superUser-block {
     display: flex;
     flex-direction: column;
     padding: 10px 10px 8px;
@@ -114,30 +99,28 @@
     margin-bottom: 20px;
     transition: 0.3s;
   }
-  .modal-forgot {
+  .superUser-forgot {
     color: white;
     margin-left: 1.5rem;
   }
-  .modal-link {
+  .superUser-link {
     color: var(--light-green);
     text-decoration: none;
     margin-left: 0.5rem;
   }
-  .input-block input {
+  .superUser-block input {
     border-radius: 10px;
     padding: 10px;
     font-size: 15px;
     color: gray;
   }
   
-  .input-block:focus-within .input-label {
-    color: rgba(140, 117, 105, 0.8);
-  }
+ 
   @media (max-width: 750px) {
-    .modal-container {
+    .superUser-container {
       max-width: 90vw;
     }
-    .modal-right {
+    .superUser-right {
       display: none;
     }
   }

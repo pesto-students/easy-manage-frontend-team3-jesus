@@ -1,88 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import SignIn from "../../assets/SignIn.jpg";
 import "./SuperUserForm.css";
-import { useFormik } from "formik";
-import { superUserSchema } from "../Schemas/SuperUserSchema";
+import { authenticateSuperGYM } from "../../Services";
+import { Navigate } from "react-router-dom";
 
 const SuperUserForm = () => {
-  const initialValues = {
- 
-    email: "",
-    password: "",
-  };
- 
-  const { values, handleBlur, handleChange,  errors, touched } =
-    useFormik({
-      initialValues,
-      validationSchema: superUserSchema,
-      validateOnChange:true,
-      validateOnBlur: false,
-      //// By disabling validation onChange and onBlur formik will validate on submit.
-      onSubmit: (values, action) => {
-        //// to get rid of all the values after submitting the form
-        action.resetForm();
+  function handleSubmit(e) {
+    e.preventDefault();
+   }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
+
+  
+
+  const login = () => {
+    authenticateSuperGYM(
+      {
+        email: email,
+        password: password,
       },
-    });
-  console.log(errors);
+      () => setRedirect(true)
+    );
+  };
+
+  if (redirect) {
+    return <Navigate to="/SuperUserDashboard" />;
+  }
+
   return (
-    <div>
-      <div className="modal">
-        <div className="modal-container">
-          <div className="modal-left">
-            <h1 className="modal-title">Super User Login</h1>
-            <form>
-              <label htmlFor="email" className="input-label">
-                Email
-              </label>
-              <div className="input-block">
-                <input
-                  type="email"
-                  autoComplete="off"
-                  name="email"
-                  id="email"
-                  placeholder="Enter your email here"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                {errors.email && touched.email ? (
-                  <p className="form-error">{errors.email}</p>
-                ) : null}
-              </div>
-              <label htmlFor="password" className="input-label">
-                Password
-              </label>
-              <div className="input-block">
-                <input
-                  type="password"
-                  autoComplete="off"
-                  name="password"
-                  id="password"
-                  placeholder="Enter Your Password here"
-                  value={values.password}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                {errors.password && touched.password ? (
-                  <p className="form-error">{errors.password}</p>
-                ) : null}
-              </div>
-              <p className="modal-forgot">
-                Forgot Password
-                <a href="!#" className="modal-link">
-                  click here
-                </a>
-              </p>
-              <div className="modal-buttons">
-                <button className="input-button" type="submit">
-                  Sign In
-                </button>
-              </div>
-            </form>
-          </div>
-          <div className="modal-right">
-            <img src={SignIn} alt="" />
-          </div>
+    <div className="superUser">
+      <div className="superUser-container">
+        <div className="superUser-left">
+          <h1 className="superUser-title">SUPER USER LOGIN</h1>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email" className="superUser-label">
+              Email
+            </label>
+            <div className="superUser-block">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Enter your email here"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+            </div>
+            <label htmlFor="password" className="superUser-label">
+              Password
+            </label>
+            <div className="superUser-block">
+              <input
+                type="password"
+                autoComplete="off"
+                name="password"
+                id="password"
+                required
+                placeholder="Enter Your Password here"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+              />
+            </div>
+            <p className="superUser-forgot">
+              Forgot Password
+              <a href="!#" className="superUser-link">
+                click here
+              </a>
+            </p>
+            <div className="superUser-buttons">
+              <button
+                onClick={login}
+                className="superUser-button"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="superUser-right">
+          <img src={SignIn} alt="" />
         </div>
       </div>
     </div>
