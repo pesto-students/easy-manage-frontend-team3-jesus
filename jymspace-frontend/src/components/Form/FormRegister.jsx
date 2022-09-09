@@ -8,8 +8,8 @@ const FormRegister = () => {
    }
   return (
     <div className="register-container">
-      <div className="register-left">
-        <h1 className="register-title">SIGN IN INTO JYM SPACE</h1>
+      
+        <h1 className="register-title">REGISTER TO JYM SPACE</h1>
 
         <form className="register-form" onSubmit={handleSubmit}>
           <div className="register-wrap">
@@ -163,11 +163,9 @@ const FormRegister = () => {
             </button>
           </div>
           </form>
-      </div>
+     
         
-      <div className="register-right">
-        <img src={Register} alt="" />
-      </div>
+     
     </div>
   );
 };

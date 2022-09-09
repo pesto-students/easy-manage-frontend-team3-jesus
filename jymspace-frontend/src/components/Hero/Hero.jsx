@@ -25,6 +25,7 @@ const Hero = () => {
             <span className="stroke-text">SPACE</span>
           </div>
           <div>
+          <Link to="/SuperUser" className='btn-sign'>Super User</Link>
             <span>
               Jym Space is a new-age Gym Management Software <br></br>
               that caters to management and clients with a blend of <br></br>
@@ -43,6 +44,7 @@ const Hero = () => {
 
       <div className="right-h">
         <Link to="/SignIn" className='btn-sign'>SIGN IN</Link>
+       
       </div>
       <img src={hero_Image} alt="" className="hero-image" />
     </div>

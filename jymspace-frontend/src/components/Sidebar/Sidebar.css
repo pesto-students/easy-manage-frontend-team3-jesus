@@ -5,19 +5,18 @@
     padding: 0.2rem 1rem;
     background-color: var(--black);
     color: #fff;
+    border-right: solid 5px var(--light-green);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bolder;
-    margin-right: 5rem;
 }
 
 .logo-icon {
-    margin-right: 0.5rem;
-    width: 100%;
+   width: 90%;
 }
 
 .menu {
@@ -34,7 +33,7 @@
     padding-left: 1rem;
     row-gap: 2rem;
     align-items: center;
-    color: #fff;
+    color: var(--light-green);
     border-radius: 5rem;
     transition: 0.2s all smooth;
 }
@@ -46,7 +45,7 @@
 
 .item:hover {
     background-color: var(--light-green);
-    color: #1e67e7;
+    color: var(--white);
     cursor: pointer;
 }
 

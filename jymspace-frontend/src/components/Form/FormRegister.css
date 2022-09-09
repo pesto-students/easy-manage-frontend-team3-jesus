@@ -1,6 +1,9 @@
 .register-container {
   display: flex;
-  max-width: 100%;
+  margin-left: 15.3rem;
+  
+  padding: 21rem;
+  
   border-radius: 10px;
   overflow: hidden;
   position: absolute;
@@ -15,30 +18,13 @@
 }
 .register-wrap {
   display: flex;
-  justify-content: space-between;
-}
+ }
 
-.register-left {
-  padding: 90px 30px 20px;
-  background: black;
-  flex: 1.5;
-  transition-duration: 0.5s;
-  opacity: 1;
-  margin-left: 4rem;
-}
-.register-right {
-  flex: 2;
-  font-size: 0;
-  transition: 0.3s;
-  overflow: hidden;
-}
-.register-right img {
-  width: 60%;
-  margin-left: 9rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-  transition-duration: 1.2s;
-}
+
+
+
+
+
 .modal.is-open .register-left {
   transform: translateY(0);
   opacity: 1;
@@ -50,7 +36,8 @@
   align-items: center;
 }
 .register-form {
-  margin-left: 7rem;
+  
+  
 }
 
 .register-button {
@@ -92,21 +79,18 @@
   margin-left: 0.5rem;
 }
 
+
 .register-block input {
   border-radius: 10px;
   font-size: 15px;
   color: gray;
   width: 120%;
-  
-  
 }
-w
+
 
 @media (max-width: 750px) {
   .modal-container {
     max-width: 90vw;
   }
-  .modal-right {
-    display: none;
-  }
+  
 }

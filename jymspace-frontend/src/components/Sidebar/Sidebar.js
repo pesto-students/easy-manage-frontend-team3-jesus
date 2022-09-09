@@ -10,14 +10,14 @@ const Sidebar = () => {
     <div className="container">
       <div className="logo">
        <img className="logo-icon" src={logo} alt='logo'/>
-        <span></span>
+        <span>Dashboard</span>
       </div>
 
       <div className="menu">
         {
           menuItems.map((item) => (
 
-            <Link to={`/${item.name}`} key={item.id} style={{textDecoration: 'none'}}>
+            <Link to={`/Dashboard/${item.name}`} key={item.id} style={{textDecoration: 'none'}}>
               <div className="item" >
                 {item.icon}
                 <h3>{item.title}</h3>
