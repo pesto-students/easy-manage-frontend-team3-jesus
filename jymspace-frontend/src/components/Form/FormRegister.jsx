@@ -1,6 +1,6 @@
 import React from "react";
 import "./FormRegister.css";
-import Register from "../../assets/Register.jpg";
+
 
 const FormRegister = () => {
   function handleSubmit(e) {

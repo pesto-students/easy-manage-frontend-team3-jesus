@@ -5,7 +5,6 @@ import DashNavbar from '../../components/DashNavbar/DashNavbar';
 
 import Sidebar from '../../components/Sidebar/Sidebar';
 
-import Users from '../../components/Users/Users';
 
 
 
