@@ -80,7 +80,7 @@ const GymRegister = () => {
       } else {
         axios
           .put(
-            `http://jymspace-api.herokuapp.com/superadmin/gym/update/${id}`,
+            `https://jymspace-api.herokuapp.com/superadmin/gym/update/${id}`,
             {
                 name,
                 email,

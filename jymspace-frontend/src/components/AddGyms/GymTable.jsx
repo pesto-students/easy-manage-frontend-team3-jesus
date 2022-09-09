@@ -10,7 +10,7 @@ const GymTable = () => {
         const [data, setData] = useState([]);
 
 const loadData = async () => {
-  const response = await axios.get("http://jymspace-api.herokuapp.com/superadmin/gym/allAccounts");
+  const response = await axios.get("https://jymspace-api.herokuapp.com/superadmin/gym/allAccounts");
   console.log(response.data)
   setData(response.data);
 };
@@ -23,7 +23,7 @@ const deleteContact = (id) => {
   if (
     window.confirm("Are you sure that you wanted to delete that contact ?")
   ) {
-    axios.delete(`http://jymspace-api.herokuapp.com/superadmin/gym/delete/${id}`);
+    axios.delete(`https://jymspace-api.herokuapp.com/superadmin/gym/delete/${id}`);
     toast.success("Contact Deleted Successfully");
     setTimeout(() => loadData(), 500);
   }
