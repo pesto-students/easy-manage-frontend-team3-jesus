@@ -25,7 +25,7 @@ const FormSignIn = () => {
   };
 
   if (redirect) {
-    return <Navigate to="/SuperUserDashboard" />;
+    return <Navigate to="/Dashboard" />;
   }
 
   return (
