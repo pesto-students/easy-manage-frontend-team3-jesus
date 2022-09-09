@@ -7,166 +7,76 @@ const FormRegister = () => {
     e.preventDefault();
    }
   return (
-    <div className="register-container">
-      
-        <h1 className="register-title">REGISTER TO JYM SPACE</h1>
+    <div className="container-register">
+    <div className="title-register">REGISTER INTO GYM SPACE</div>
+    <div className="content-register">
+      <form action="#" onClick={handleSubmit}>
+        <div className="user-details-register">
+          <div className="input-box-register">
+            <span className="details-register">Name</span>
+            <input type="text" 
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            value={name || ""} 
+            onChange={handleInputChange}
+            />
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">Gender</span>
+            <input type="text" 
+            id="sex"
+            name="sex"
+            value={sex || ""}
+            placeholder="Enter your gender" 
 
-        <form className="register-form" onSubmit={handleSubmit}>
-          <div className="register-wrap">
-            <div className="register-flex">
-           
-            <label htmlFor="name" className="register-label">
-              name
-            </label>
-            <div className="register-block">
-              <input
-                type="text"
-                autoComplete="off"
-                required
-                name="name"
-                id="name"
-                placeholder="Enter your name here"
-                />
-            </div>
-            </div>
-
-            <div className="register-flex">
-            <label htmlFor="sex" className="register-label">
-              Gender
-            </label>
-
-            <div className="register-block">
-              <input
-                type="text"
-                autoComplete="off"
-                required
-                name="gym_name"
-                id="gym_name"
-                placeholder="Enter your gym name here"
-              />
-            </div>
-            </div>
+            />
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">Email</span>
+            <input type="email" placeholder="Enter your email" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">Password</span>
+            <input type="password" placeholder="Enter your number" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">Address</span>
+            <input type="textarea" placeholder="Enter your password" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">city</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">state</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">country</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">RoleId</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">GymPlanId</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+          <div className="input-box-register">
+            <span className="details-register">GymId</span>
+            <input type="text" placeholder="Confirm your password" required/>
           </div>
 
-          <div className="register-wrap">
-          <div className="register-flex">
-            <label htmlFor="email" className="register-label">
-              Email
-            </label>
-            <div className="register-block">
-              <input
-                type="email"
-                autoComplete="off"
-                required
-                name="email"
-                id="email"
-                placeholder="Enter your email here"
-              />
-            </div>
-            </div>
-
-            <div className="register-flex">
-              <label htmlFor="password" className="register-label">
-                Password
-              </label>
-              <div className="register-block">
-                <input
-                  type="password"
-                  autoComplete="off"
-                  required
-                  name="password"
-                  id="password"
-                  placeholder="Enter Your Password here"
-                />
-              </div>
-              </div>
-            </div>
-            <div className="register-wrap">
-            <div className="register-flex">
-            <label htmlFor="address" className="register-label">
-              Address
-            </label>
-
-            <div className="register-block">
-              <input
-                type="text"
-                autoComplete="off"
-                required
-                name="address"
-                id="address"
-                placeholder="Enter your address here"
-              />
-            </div>
-            </div>
-             
-            <div className="register-flex">
-          <label htmlFor="city" className="register-label">
-            City
-          </label>
-         
-            <div className="register-block">
-              <input
-                type="text"
-                autoComplete="off"
-                required
-                name="city"
-                id="city"
-                placeholder="Enter your city name here"
-              />
-            </div>
-          </div>
-          </div>
-
-          <div className="register-wrap">
-          <div className="register-flex">
-          <label htmlFor="State name" className="register-label">
-            State
-          </label>
-
-            <div className="register-block">
-              <input
-                type="text"
-                autoComplete="off"
-                required
-                name="state_name"
-                id="state_name"
-                placeholder="Enter your state name here"
-                />
-            </div>
-            </div>
-            <div className="register-flex">
-          <label htmlFor="country" className="register-label">
-            Country
-          </label>
-          
-            <div className="register-block">
-              <input
-                type="text"
-                autoComplete="off"
-                required
-                name="country"
-                id="country"
-                placeholder="Enter your state name here"
-                />
-            </div>
-          </div>
-          </div>
-          <p className="register-forgot">
-            Forgot Password
-            <a href="!#" className="register-link">
-              click here
-            </a>
-          </p>
-          <div className="register-buttons">
-            <button className="register-button" type="submit">
-              Register
-            </button>
-          </div>
-          </form>
-     
-        
-     
-    </div>
+        </div>
+       <div className="button-register">
+          <input type="submit" value="Register"/>
+        </div>
+      </form>
+  </div>
+  </div>
+ 
   );
 };
 
