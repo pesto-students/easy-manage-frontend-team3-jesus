@@ -2,7 +2,7 @@ import React from "react";
 import hero_Image from "../../assets/hero.png";
 import "./Hero.css";
 import Navbar from "../../components/Navbar/Navbar";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -25,7 +25,6 @@ const Hero = () => {
             <span className="stroke-text">SPACE</span>
           </div>
           <div>
-          <Link to="/SuperUser" className='btn-sign'>Super User</Link>
             <span>
               Jym Space is a new-age Gym Management Software <br></br>
               that caters to management and clients with a blend of <br></br>
@@ -36,7 +35,7 @@ const Hero = () => {
             <span>We welcome you to the future of gyms!</span>
             {/*HERO BUTTON*/}
             <div className="hero-button">
-            <Link to="/ContactUs" className='btn'>GET A QUOTE &#8594;</Link>
+              <Link to="/ContactUs" className='btn'>GET A QUOTE &#8594;</Link>
             </div>
           </div>
         </div>
@@ -44,7 +43,6 @@ const Hero = () => {
 
       <div className="right-h">
         <Link to="/SignIn" className='btn-sign'>SIGN IN</Link>
-       
       </div>
       <img src={hero_Image} alt="" className="hero-image" />
     </div>

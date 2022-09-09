@@ -18,8 +18,8 @@ const FormRegister = () => {
             id="name"
             name="name"
             placeholder="Enter your name"
-            value={name || ""} 
-            onChange={handleInputChange}
+            //value={} 
+           // onChange={handleInputChange}
             />
           </div>
           <div className="input-box-register">
@@ -27,7 +27,7 @@ const FormRegister = () => {
             <input type="text" 
             id="sex"
             name="sex"
-            value={sex || ""}
+            //value={}
             placeholder="Enter your gender" 
 
             />
