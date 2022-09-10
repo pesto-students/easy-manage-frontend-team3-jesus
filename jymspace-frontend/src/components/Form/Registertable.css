@@ -1,5 +1,6 @@
 
-.styled-table {
+
+.styled-table-register {
     border-collapse: collapse;
     margin: auto;
     font-size: 0.9em;
@@ -9,7 +10,7 @@
     border: 3px solid green;
   }
   
-  .styled-table thead tr {
+  .styled-table-register thead tr {
     background-image: var(--gradient);
     color: #ffffff;
     text-align: left;
@@ -17,13 +18,17 @@
 
   }
   
-  .styled-table th,
-  .styled-table td {
+  .styled-table-register th,
+  .styled-table-register td {
     padding: 12px 15px;
    
   }
   
-
+  .user-register{
+ width: 80%;
+ position: relative;
+ left: 18%; 
+  }
   
   .styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
@@ -32,15 +37,15 @@
 
   }
   
-  .styled-table tbody tr:nth-of-type(even) {
+  .styled-table-register tbody tr:nth-of-type(even) {
     background-color: black;
   }
   
-  .styled-table tbody tr:last-of-type {
+  .styled-table-register tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
   }
   
-  .btn-table {
+  .btn-table-register {
     border: none;
     color: white;
     padding: 5px 8px;
@@ -54,19 +59,15 @@
    
   }
   
-  .btn-edit {
+  .btn-edit-register {
     background-color: #008cba;
   }
   
-  .btn-delete {
+  .btn-delete-register {
     background-color: #f44336;
   }
   
-  .btn-view {
-    background-color: #e7e7e7;
-    color: black;
-  }
-
+  
   .btn-role,.btn-packages,.btn-gym{
     padding: 12px 18px;
     font-weight: bold;

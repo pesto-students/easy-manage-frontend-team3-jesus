@@ -29,9 +29,8 @@ const deleteContact = (id) => {
   }
 };
 return (
-  <div style={{ marginTop: "150px" }}>
-    <Link to="/GymRegister">
-      <button className="btn btn-gym">Add Gym</button>
+  <div >
+    <Link className="btn-table btn-gym" to="/GymRegister">Add Gym
     </Link>
     <table className="styled-table">
       <thead>
@@ -44,6 +43,8 @@ return (
           <th style={{ textAlign: "center" }}>State Name</th>
           <th style={{ textAlign: "center" }}>Country</th>
           <th style={{ textAlign: "center" }}>JymPlanId</th>
+          <th style={{ textAlign: "center" }}>Action</th>
+
          
 
          </tr>
@@ -64,11 +65,11 @@ return (
 
               <td>
                 <Link to={`/update/${item.id}`}>
-                  <button className="btn btn-edit">Edit</button>
+                  <button className="btn-table btn-edit">Edit</button>
                   
                 </Link>
                 <button
-                  className="btn btn-delete"
+                  className="btn-table btn-delete"
                   onClick={() => deleteContact(item.id)}>
                   Delete
                 </button>
