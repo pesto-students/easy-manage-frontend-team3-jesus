@@ -4,12 +4,12 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import "./Registertable.css";
 
-const GymTable = () => {
+const RegisterTable = () => {
   const [data, setData] = useState([]);
 
   const loadData = async () => {
     const response = await axios.get(
-      "https://jymspace-api.herokuapp.com/superadmin/gym/allAccounts"
+      "https://jymspace-api.herokuapp.com/gym/users/allaccounts"
     );
     console.log(response.data);
     setData(response.data);
@@ -24,7 +24,7 @@ const GymTable = () => {
       window.confirm("Are you sure that you wanted to delete that contact ?")
     ) {
       axios.delete(
-        `https://jymspace-api.herokuapp.com/superadmin/gym/delete/${id}`
+        `https://jymspace-api.herokuapp.com/gym/user/delete/${id}`
       );
       toast.success("Contact Deleted Successfully");
       setTimeout(() => loadData(), 500);
@@ -88,4 +88,4 @@ const GymTable = () => {
   );
 };
 
-export default GymTable;
+export default RegisterTable;

@@ -19,7 +19,7 @@ export const menuItems = [
     {
         id: 3,
         title: "Users",
-        name: "Users",
+        name: "RegisterTable",
         icon: <HiOutlineUsers className='icon' />,
     },
    

@@ -26,7 +26,7 @@ const GymRegister = () => {
   city,
   stateName,
   country,
-  JymPlanId,
+  JymPlanId= null,
   } = state;
 
   const Navigate = useNavigate();
@@ -34,7 +34,9 @@ const GymRegister = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`https://jymspace-api.herokuapp.com/superadmin/gym/${id}`,).then((resp) => setState({ ...resp.data[0] }));
+    
+    axios.get(`https://jymspace-api.herokuapp.com/superadmin/gym/get/${id}`).then((resp) => setState({ ...resp.data}));
+
   }, [id]);
 
   const handleSubmit = (e) => {
@@ -79,7 +81,7 @@ const GymRegister = () => {
           .catch((err) => toast.error(err.response.data));
       } else {
         axios
-          (
+          .put(
             `https://jymspace-api.herokuapp.com/superadmin/gym/update/${id}`,
             {
                 name,
@@ -103,9 +105,10 @@ const GymRegister = () => {
                 country: "",
                 JymPlanId: "",
             });
+            toast.success("Contact Updated Successfully");
           })
           .catch((err) => toast.error(err.response.data));
-        toast.success("Contact Updated Successfully");
+        
       }
 
       setTimeout(() => Navigate("/GymTable"), 500);
@@ -208,9 +211,9 @@ const GymRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <select onChange={e => setState(oldState => ({...oldState,JymPlanId:e.target.value}))} value={JymPlanId}>
+          <select onChange={e => setState(oldState => ({...oldState,JymPlanId:e.target.value}))}  defaultValue={"DEFAULT"}>
            
-            <option  value="" disabled selected hidden>
+            <option  value="DEFAULT" disabled hidden>
               Select plans
             </option>
             <option value="3cc41ffb-b55a-4aad-8c59-16c9b6e9ac44">
