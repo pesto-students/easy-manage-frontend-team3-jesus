@@ -38,7 +38,7 @@ const FormRegister = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(``).then((resp) => setState({ ...resp.data[0] }));
+    axios.get(`https://jymspace-api.herokuapp.com/gym/user/${id}`).then((resp) => setState({ ...resp.data[0] }));
   }, [id]);
 
   const handleSubmit = (e) => {
@@ -88,7 +88,7 @@ const FormRegister = () => {
           .catch((err) => toast.error(err.response.data));
       } else {
         axios
-          .put(`https://jymspace-api.herokuapp.com/gym/users/update/${id}`, {
+          .put(`https://jymspace-api.herokuapp.com/gym/user/update/${id}`, {
             name,
             sex,
             email,

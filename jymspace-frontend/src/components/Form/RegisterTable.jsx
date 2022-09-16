@@ -44,8 +44,8 @@ const RegisterTable = () => {
             <th style={{ textAlign: "center" }}>Password</th>
             <th style={{ textAlign: "center" }}>Address</th>
             <th style={{ textAlign: "center" }}>City</th>
-            <th style={{ textAlign: "center" }}>RoleId</th>
-            <th style={{ textAlign: "center" }}>GymPlanId</th>
+            <th style={{ textAlign: "center" }}>StateName</th>
+            <th style={{ textAlign: "center" }}>country</th>
             <th style={{ textAlign: "center" }}>GymId</th>
             <th style={{ textAlign: "center" }}>Action</th>
           </tr>
@@ -62,8 +62,8 @@ const RegisterTable = () => {
                 <td>{item.city}</td>
                 <td>{item.StateName}</td>
                 <td>{item.country}</td>
-                <td>{item.RoleId}</td>
-                <td>{item.GymPlanId}</td>
+               
+                
                 <td>{item.GymId}</td>
 
                 <td>

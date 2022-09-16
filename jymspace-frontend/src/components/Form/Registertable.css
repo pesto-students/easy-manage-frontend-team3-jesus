@@ -1,13 +1,15 @@
 
 
 .styled-table-register {
+    width: 100px;
     border-collapse: collapse;
     margin: auto;
     font-size: 0.9em;
     font-family: sans-serif;
-    max-width: 1000px;
+   
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border: 3px solid green;
+   
   }
   
   .styled-table-register thead tr {
@@ -25,9 +27,10 @@
   }
   
   .user-register{
- width: 80%;
- position: relative;
- left: 18%; 
+   width: 80%;
+   position: relative;
+   overflow: auto;
+   left: 18%; 
   }
   
   .styled-table tbody tr {

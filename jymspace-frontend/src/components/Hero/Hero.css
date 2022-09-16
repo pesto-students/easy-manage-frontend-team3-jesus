@@ -1,4 +1,4 @@
-body {}
+
 
 .hero {
   display: flex;
@@ -127,7 +127,7 @@ body {}
 .right-h>.btn-sign {
   position: relative;
   left: 50%;
-  top: 4%;
+  top: 5%;
 
 }
 

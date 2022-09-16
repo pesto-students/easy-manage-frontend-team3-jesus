@@ -2,6 +2,7 @@ import React from "react";
 import "./Plans.css";
 import { plansData } from "../../Data/plansData";
 import checkmark from "../../assets/tick-mark.png";
+import { Link } from "react-router-dom";
 
 
 const Plans = () => {
@@ -32,7 +33,7 @@ const Plans = () => {
             <div>
               <span> See more benefits -> </span>
             </div>
-            <button className="btn">JOIN NOW</button>
+            <Link to="/ContactUs" className="btn-plans">JOIN NOW</Link>
           </div>
         ))}
       </div>

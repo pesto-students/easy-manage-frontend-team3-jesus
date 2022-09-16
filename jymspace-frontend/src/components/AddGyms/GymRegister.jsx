@@ -233,7 +233,7 @@ const GymRegister = () => {
         <div className="form-footer">
           <input type="submit" value={id ? "Update" : "Save"} />
 
-          <Link className="back" to="/">
+          <Link className="back" to="/GymTable">
             <input type="button" value="Go Back" />
           </Link>
         </div>

@@ -10,12 +10,6 @@ const Hero = () => {
     <div className="hero">
       <div className="left-h">
         <Navbar />
-        {/* The JYM SPACE */}
-        <div className="the-jym-space">
-          <div></div>
-          <span>Fitness is the ultimate fashion</span>
-        </div>
-
         {/*HERO HEADING */}
         <div className="hero-text">
           <div>

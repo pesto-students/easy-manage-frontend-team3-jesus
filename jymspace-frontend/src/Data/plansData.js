@@ -78,7 +78,7 @@ export const plansData = [
     name: "FREE TRIAL",
     price: "0",
     features: [
-      "(7 DAYS FREE TRIAL) For smaller gyms ",
+      "(7 DAYS FREE TRIAL) For smaller gyms for upscale their gyms ",
       "zero employees",
       "100 Members",
     ],
