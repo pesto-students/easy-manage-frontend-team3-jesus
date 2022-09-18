@@ -220,17 +220,7 @@ const FormRegister = () => {
               />
             </div>
 
-            <div className="input-box-register">
-              <span className="details-register">GymId</span>
-              <input
-                type="text"
-                placeholder="enter your Gym id"
-                id="GymId"
-                name="GymId"
-                value={GymId || ""}
-                onChange={handleInputChange}
-              />
-            </div>
+           
           </div>
           <div className="button-register">
             <input type="submit" value={id ? "Update" : "Save"} />
