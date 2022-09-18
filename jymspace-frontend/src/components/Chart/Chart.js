@@ -11,7 +11,7 @@ const Chart = () => {
     <>
    
     <div className="charts">
-    <img style={{marginLeft:'700px',marginBottom:'30px'}} src={ComingSoon} />
+    <img style={{marginLeft:'700px',marginBottom:'30px'}} src={ComingSoon} alt="coming soon" />
     <br />
       <div>
         

@@ -47,7 +47,7 @@ const UserDashboard = () => {
         </div>
         
       </div>
-      <img style={{marginLeft:'785px',marginBottom:'30px'}} src={ComingSoon} />
+      <img style={{marginLeft:'785px',marginBottom:'30px'}} src={ComingSoon} alt="coming soon" />
     </div>
   );
 };
