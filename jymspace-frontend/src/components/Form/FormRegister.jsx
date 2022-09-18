@@ -14,7 +14,6 @@ const initialState = {
   stateName: "",
   country: "",
   GymId: "",
-
 };
 
 const FormRegister = () => {
@@ -30,7 +29,6 @@ const FormRegister = () => {
     stateName,
     country,
     GymId,
-
   } = state;
 
   const Navigate = useNavigate();
@@ -38,7 +36,9 @@ const FormRegister = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`https://jymspace-api.herokuapp.com/gym/user/${id}`).then((resp) => setState({ ...resp.data[0] }));
+    axios
+      .get(`https://jymspace-api.herokuapp.com/gym/user/${id}`)
+      .then((resp) => setState({ ...resp.data }));
   }, [id]);
 
   const handleSubmit = (e) => {
@@ -68,7 +68,6 @@ const FormRegister = () => {
             stateName,
             country,
             GymId,
-
           })
           .then(() => {
             setState({
@@ -81,9 +80,8 @@ const FormRegister = () => {
               stateName: "",
               country: "",
               GymId: "",
-
             });
-            toast.success("Contact Added Successfully");
+            toast.success("user Added Successfully");
           })
           .catch((err) => toast.error(err.response.data));
       } else {
@@ -98,7 +96,6 @@ const FormRegister = () => {
             stateName,
             country,
             GymId,
-
           })
           .then(() => {
             setState({
@@ -144,6 +141,7 @@ const FormRegister = () => {
                 onChange={handleInputChange}
               />
             </div>
+           
             <div className="input-box-register">
               <span className="details-register">Gender</span>
               <input
@@ -189,7 +187,7 @@ const FormRegister = () => {
               />
             </div>
             <div className="input-box-register">
-              <span className="details-register">city</span>
+              <span className="details-register">City</span>
               <input
                 type="text"
                 placeholder="Enter your city name"
@@ -200,7 +198,7 @@ const FormRegister = () => {
               />
             </div>
             <div className="input-box-register">
-              <span className="details-register">state</span>
+              <span className="details-register">State</span>
               <input
                 type="text"
                 placeholder="Enter your state name"
@@ -211,7 +209,7 @@ const FormRegister = () => {
               />
             </div>
             <div className="input-box-register">
-              <span className="details-register">country</span>
+              <span className="details-register">Country</span>
               <input
                 type="text"
                 placeholder="Enter your country name "
@@ -236,7 +234,7 @@ const FormRegister = () => {
           </div>
           <div className="button-register">
             <input type="submit" value={id ? "Update" : "Save"} />
-            <Link className="back" to="/Dashboard">
+            <Link className="back" to="/Dashboard/Home">
               <input type="button" value="Go Back" />
             </Link>
           </div>

@@ -30,10 +30,8 @@ const Plans = () => {
                 </div>
               ))}
             </div>
-            <div>
-              <span> See more benefits -> </span>
-            </div>
-            <Link to="/ContactUs" className="btn-plans">JOIN NOW</Link>
+            
+            <Link to="/ContactUs" className="btn-plans">GET A QUOTE HERE</Link>
           </div>
         ))}
       </div>

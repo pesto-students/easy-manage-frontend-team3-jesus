@@ -26,7 +26,7 @@ const RegisterTable = () => {
       axios.delete(
         `https://jymspace-api.herokuapp.com/gym/user/delete/${id}`
       );
-      toast.success("Contact Deleted Successfully");
+      toast.success("user Deleted Successfully");
       setTimeout(() => loadData(), 500);
     }
   };
@@ -41,12 +41,11 @@ const RegisterTable = () => {
             <th style={{ textAlign: "center" }}>Name</th>
             <th style={{ textAlign: "center" }}>Gender</th>
             <th style={{ textAlign: "center" }}>Email</th>
-            <th style={{ textAlign: "center" }}>Password</th>
             <th style={{ textAlign: "center" }}>Address</th>
             <th style={{ textAlign: "center" }}>City</th>
             <th style={{ textAlign: "center" }}>StateName</th>
             <th style={{ textAlign: "center" }}>country</th>
-            <th style={{ textAlign: "center" }}>GymId</th>
+            
             <th style={{ textAlign: "center" }}>Action</th>
           </tr>
         </thead>
@@ -56,18 +55,15 @@ const RegisterTable = () => {
               <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>{item.sex}</td>
-                <td>{item.email}</td>
-                <td>{item.password}</td>
+                <td>{item.email}</td>  
                 <td>{item.address}</td>
                 <td>{item.city}</td>
-                <td>{item.StateName}</td>
+                <td>{item.stateName}</td>
                 <td>{item.country}</td>
-               
                 
-                <td>{item.GymId}</td>
 
                 <td>
-                  <Link to={`/update/${item.id}`}>
+                  <Link to={`/updateRegister/${item.id}`}>
                     <button className="btn-table-register btn-edit-register">
                       Edit
                     </button>

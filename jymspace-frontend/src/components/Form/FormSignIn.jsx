@@ -25,7 +25,7 @@ const FormSignIn = () => {
   };
 
   if (redirect) {
-    return <Navigate to="/Dashboard" />;
+    return <Navigate to="/Dashboard/Home" />;
   }
 
   return (

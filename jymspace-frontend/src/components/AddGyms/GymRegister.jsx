@@ -47,7 +47,7 @@ const GymRegister = () => {
       !password ||
       !address ||
       !city ||
-      !state ||
+      !stateName ||
       !country ||
       !JymPlanId
     ) {
@@ -76,7 +76,7 @@ const GymRegister = () => {
                 country: "",
                 JymPlanId: "",
             });
-            toast.success("Contact Added Successfully");
+            toast.success("Gym owner Added Successfully");
           })
           .catch((err) => toast.error(err.response.data));
       } else {
@@ -216,13 +216,13 @@ const GymRegister = () => {
             <option  value="DEFAULT" disabled hidden>
               Select plans
             </option>
-            <option value="3cc41ffb-b55a-4aad-8c59-16c9b6e9ac44">
+            <option value="0d281609-6930-4b76-b848-2615a02d250c">
               Free Trail
             </option>
-            <option value="4b7c357f-d686-42b3-ae7d-2ce893e17479">
+            <option value="f1b7c515-7c4a-4888-a9f7-18e5a94381d6">
               Pro Plan
             </option>
-            <option value="b1c658f5-c814-4304-b7dd-8f22202a4529">
+            <option value="ec492585-025e-4c11-bb33-a4f124c48dae">
               Premium Plan
             </option>
             

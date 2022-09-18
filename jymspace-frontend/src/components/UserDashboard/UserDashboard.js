@@ -3,9 +3,8 @@ import "./UserDashboard.css";
 import { GiProgression, GiProfit } from "react-icons/gi";
 import { BsFillCartCheckFill} from "react-icons/bs"
 import { HiUsers } from "react-icons/hi";
-import { CircularProgressbar } from 'react-circular-progressbar';
+
 import 'react-circular-progressbar/dist/styles.css';
-import DoughnutChart  from "../../Charts/DoughnutChart";
 
 const UserDashboard = () => {
   return (
@@ -18,8 +17,8 @@ const UserDashboard = () => {
             <GiProgression />
           </div>
           <div className="box-data">
-            <span>Sales</span>
-            <h1>+28%</h1>
+            <span>Members</span>
+            <h1>120</h1>
           </div>
 
         </div>
@@ -30,8 +29,8 @@ const UserDashboard = () => {
             <HiUsers />
           </div>
           <div className="box-data">
-            <span>New Customers</span>
-            <h1>+24</h1>
+            <span>Employess</span>
+            <h1>7</h1>
           </div>
 
         </div>
@@ -41,8 +40,8 @@ const UserDashboard = () => {
             <GiProfit />
           </div>
           <div className="box-data">
-            <span>Profit</span>
-            <h1>+56%</h1>
+            <span>Dues</span>
+            <h1>12</h1>
           </div>
 
         </div>
@@ -52,40 +51,14 @@ const UserDashboard = () => {
             <BsFillCartCheckFill />
           </div>
           <div className="box-data">
-            <span>New Orders</span>
-            <h1>+26</h1>
+            <span>Complaints</span>
+            <h1>4</h1>
           </div>
 
         </div>
       </div>
 
-      <div className="home-container-2">
-        <div className="card">
-          <div style={{ width: 250, height: 250 }}>
-            <CircularProgressbar value={66} circleRatio={0.75} maxValue={100} text={`75%`} 
-              styles={{
-                trail: {
-                  transform: 'rotate(-135deg)',
-                  transformOrigin: 'center center',
-                  strokeWidth: 3,
-                },
-
-                path: {
-                  transform: 'rotate(-135deg)',
-                  transformOrigin: 'center center',
-                  stroke: "#34ccfc",
-                  strokeWidth: 4.5,
-                }
-              }}
-            />
-
-            <h1>Progress</h1>
-          </div>
-        </div>
-        <div className="card">
-          <DoughnutChart /> 
-        </div>
-      </div>
+     
     </div>
   )
 }

@@ -58,7 +58,7 @@ return (
               <td>{item.email}</td>
               <td>{item.address}</td>
               <td>{item.city}</td>
-              <td>{item.state}</td>
+              <td>{item.stateName}</td>
               <td>{item.country}</td>
               <td>{item.JymPlanId}</td>
               

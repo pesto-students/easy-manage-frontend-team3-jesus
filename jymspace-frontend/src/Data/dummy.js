@@ -7,7 +7,7 @@ export const menuItems = [
     {
         id: 1,
         title: "Home",
-        name: "",
+        name: "Home",
         icon: <HiOutlineHome className='icon' />,
     },
     {

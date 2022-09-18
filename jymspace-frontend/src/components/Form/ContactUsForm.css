@@ -1,7 +1,8 @@
 
 .contact-form {
     padding-bottom:10rem;
-    background-image: var(--gradient);
+    background-image: url(../../assets/attractive-young-woman-her-trainer-running-treadmill-gym.jpg) ; 
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -16,20 +16,22 @@
 .footer > hr {
   border: 1px solid var(--light-green);
 }
-.list {
-  list-style: none;
+.list-footer {
   color: var(--white);
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  margin-right: 2rem;
 }
-.list > li {
-  margin: 0 1rem;
+.links-footer {
+  text-decoration: none;
+  margin-right: 1rem;
+  color: white;
 }
-.list > li:hover {
+
+.links-footer:hover {
   color: var(--light-green);
   cursor: pointer;
+  
 }
 .copyright {
   color: var(--white);
