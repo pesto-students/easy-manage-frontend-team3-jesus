@@ -16,8 +16,9 @@ import Chart from "../components/Chart/Chart";
 import UserDashboard from "../components/UserDashboard/UserDashboard";
 import "react-toastify/dist/ReactToastify.css";
 import RegisterTable from "../components/Form/RegisterTable";
+import FormRegister from "../components/Form/FormRegister";
 const Home = lazy(() => import("../Pages/Home/Home"));
-const Pricing = lazy(() => import("../Pages/Pricing/Pricing"));
+
 const ContactUs = lazy(() => import("../Pages/ContactUs/ContactUs"));
 
 const AppRouter = () => {
@@ -30,7 +31,6 @@ const AppRouter = () => {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/Pricing" element={<Pricing />} />
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/SuperUser" element={<SuperUser />} />
@@ -41,12 +41,13 @@ const AppRouter = () => {
             <Route path="/GymRegister" element={<GymRegister />} />
             <Route path="/GymTable" element={<GymTable />} />
             <Route path="/update/:id" element={<GymRegister />} />
+            <Route path="/updateRegister/:id" element={<FormRegister />} />
             <Route 
              path="/Dashboard" element={<Dashboard />}>
+            <Route path="Home" element={<UserDashboard />} />
             <Route path="Register" element={<Register />} />
             <Route path="RegisterTable" element={<RegisterTable />} />
             <Route path="Chart" element={<Chart />} />
-            <Route path="UserDashboard" element={<UserDashboard />}/>
             </Route>
               
             
