@@ -13,7 +13,7 @@ const initialState = {
   city: "",
   stateName: "",
   country: "",
-  GymId: "",
+ 
 };
 
 const FormRegister = () => {
@@ -28,7 +28,7 @@ const FormRegister = () => {
     city,
     stateName,
     country,
-    GymId,
+   
   } = state;
 
   const Navigate = useNavigate();
@@ -51,8 +51,8 @@ const FormRegister = () => {
       !address ||
       !city ||
       !stateName ||
-      !country ||
-      !GymId
+      !country 
+    
     ) {
       toast.error("Please provide value into each input field");
     } else {
@@ -67,7 +67,7 @@ const FormRegister = () => {
             city,
             stateName,
             country,
-            GymId,
+           
           })
           .then(() => {
             setState({
@@ -79,7 +79,7 @@ const FormRegister = () => {
               city: "",
               stateName: "",
               country: "",
-              GymId: "",
+             
             });
             toast.success("user Added Successfully");
           })
@@ -95,7 +95,7 @@ const FormRegister = () => {
             city,
             stateName,
             country,
-            GymId,
+           
           })
           .then(() => {
             setState({
@@ -107,7 +107,7 @@ const FormRegister = () => {
               city: "",
               stateName: "",
               country: "",
-              GymId: "",
+              
             });
           })
           .catch((err) => toast.error(err.response.data));
