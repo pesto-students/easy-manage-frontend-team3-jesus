@@ -13,6 +13,7 @@ import GymTable from "../components/AddGyms/GymTable";
 import Register from "../Pages/Register/Register";
 
 import Chart from "../components/Chart/Chart";
+import Logout from "../components/Logout/Logout";
 import UserDashboard from "../components/UserDashboard/UserDashboard";
 import "react-toastify/dist/ReactToastify.css";
 import RegisterTable from "../components/Form/RegisterTable";
@@ -34,6 +35,7 @@ const AppRouter = () => {
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/SuperUser" element={<SuperUser />} />
+            <Route path="/Logout" element={<Logout to='/SuperUser'/>} />
             <Route
               path="/SuperUserDashboard"
               element={<SuperUserDashBoard />}
@@ -48,6 +50,7 @@ const AppRouter = () => {
             <Route path="Register" element={<Register />} />
             <Route path="RegisterTable" element={<RegisterTable />} />
             <Route path="Chart" element={<Chart />} />
+            <Route path="Logout" element={<Logout to='/SignIn'/>} />
             </Route>
               
             

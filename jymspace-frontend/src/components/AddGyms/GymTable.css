@@ -78,4 +78,21 @@
     position: fixed;
     margin:11px 1rem;
   }
-  
+  .add-logout{
+    display: flex;
+  }
+
+  .gym-logout{
+    position: absolute;
+    right:10px;
+    top:10px;
+    border-radius:5px;
+    padding: 12px 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--light-green);
+    color: var(--black);
+  }
+  .heading-center {
+    text-align: center;
+  }

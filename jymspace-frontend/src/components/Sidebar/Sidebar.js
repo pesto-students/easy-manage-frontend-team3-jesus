@@ -17,7 +17,7 @@ const Sidebar = () => {
         {
           menuItems.map((item) => (
 
-            <Link to={`/Dashboard/${item.name}`} key={item.id} style={{textDecoration: 'none'}}>
+            <Link to={item.name} key={item.id} style={{textDecoration: 'none'}}>
               <div className="item" >
                 {item.icon}
                 <h3>{item.title}</h3>

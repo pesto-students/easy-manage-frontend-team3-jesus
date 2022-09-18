@@ -1,7 +1,7 @@
 import { SERVICE_URLS } from './ServiceUrls'
 import {LOGIN_TOKEN_KEY,NetworkManager} from '../Utility'
 
-export function authenticateSuperGYM({ email,password},cb) {
+export function authenticateSuperGYM({ email,password},cb,errorCb) {
     NetworkManager.post(SERVICE_URLS.AUTHENTICATE_SUPER_GYM, {
         email: email,  
         password: password,
@@ -11,5 +11,5 @@ export function authenticateSuperGYM({ email,password},cb) {
           console.log(response.data);
           cb()
         } else console.log("invalid user");
-      });
+      }).catch(errorCb);
 }

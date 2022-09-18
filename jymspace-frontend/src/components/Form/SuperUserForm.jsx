@@ -5,14 +5,10 @@ import { authenticateSuperGYM } from "../../Services";
 import { Navigate } from "react-router-dom";
 
 const SuperUserForm = () => {
-  function handleSubmit(e) {
-    e.preventDefault();
-   }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
-
-  
+  const [authError, setAuthError] = useState(false);
 
   const login = () => {
     authenticateSuperGYM(
@@ -20,9 +16,15 @@ const SuperUserForm = () => {
         email: email,
         password: password,
       },
-      () => setRedirect(true)
+      () => setRedirect(true),
+      () => setAuthError(true)
     );
   };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    login()
+   }
 
   if (redirect) {
     return <Navigate to="/SuperUserDashboard" />;
@@ -65,15 +67,9 @@ const SuperUserForm = () => {
                 }}
               />
             </div>
-            <p className="superUser-forgot">
-              Forgot Password
-              <a href="!#" className="superUser-link">
-                click here
-              </a>
-            </p>
+            {authError ? <div className="superUser-forgot superUser-error">Invalid credentials</div> : null}
             <div className="superUser-buttons">
               <button
-                onClick={login}
                 className="superUser-button"
                 type="submit"
               >

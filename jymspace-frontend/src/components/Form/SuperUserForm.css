@@ -101,7 +101,7 @@
   }
   .superUser-forgot {
     color: white;
-    margin-left: 1.5rem;
+    margin-left: .9rem;
   }
   .superUser-link {
     color: var(--light-green);
@@ -113,6 +113,9 @@
     padding: 10px;
     font-size: 15px;
     color: gray;
+  }
+  .superUser-error{
+    color:red;
   }
   
  

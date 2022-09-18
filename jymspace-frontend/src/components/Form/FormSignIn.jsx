@@ -5,24 +5,29 @@ import { Navigate } from "react-router-dom";
 import "./FormSignIn.css";
 
 const FormSignIn = () => {
-  function handleSubmit(e) {
-    e.preventDefault();
-   }
+ 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
-
+  const [authError,setAuthError] = useState(false)
 
 
   const login = () => {
+    setAuthError(false)
     authenticateGYM(
       {
         email: email,
         password: password,
       },
-      () => setRedirect(true)
+      () => setRedirect(true),
+      () => setAuthError(true)
     );
   };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    login()
+   }
 
   if (redirect) {
     return <Navigate to="/Dashboard/Home" />;
@@ -68,19 +73,15 @@ const FormSignIn = () => {
                 }}
                 />
             </div>
-            <p className="signIn-forgot">
-              Forgot Password
-              <a href="!#" className="signIn-link">
-                click here
-              </a>
-            </p>
+            {authError ? <div className="signIn-error signIn-forgot">Invalid Credentials</div> : null}
             <div className="signIn-buttons">
-              <button onClick={login} className="signIn-button" type="submit">
+              <button className="signIn-button" type="submit">
                 Sign In
               </button>
             </div>
                 </form>
           </div>
+         
           <div className="signIn-right">
             <img src={SignIn} alt="" />
           </div>

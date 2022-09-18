@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import { Link,Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import "./Registertable.css";
+import Loader from "../Loader/Loader";
 
 const RegisterTable = () => {
   const [data, setData] = useState([]);
+  const [error,setError]= useState(false)
+  const [loading,setLoading] = useState(true)
 
   const loadData = async () => {
+    try {
     const response = await axios.get(
       "https://jymspace-api.herokuapp.com/gym/users/allaccounts"
     );
-    console.log(response.data);
+    setLoading(false)
     setData(response.data);
+    }catch(e){
+      setLoading(false)
+      setError(true)
+    }
   };
 
   useEffect(() => {
@@ -30,11 +39,11 @@ const RegisterTable = () => {
       setTimeout(() => loadData(), 500);
     }
   };
+  if(error) return <Navigate to='/SignIn' />
+  if(loading) return <Loader />
+
   return (
     <div className="user-register">
-      {/* <Link className="btn-table-register btn-gym-register" to="/FormRegister">
-        Add Gym
-      </Link> */}
       <table className="styled-table-register">
         <thead>
           <tr>

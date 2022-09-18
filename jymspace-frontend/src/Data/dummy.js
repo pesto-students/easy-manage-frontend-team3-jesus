@@ -1,25 +1,25 @@
 import React from 'react';
 import { HiOutlineHome, HiOutlineUsers } from 'react-icons/hi';
 import { FaUsers } from 'react-icons/fa';
-import { IoStatsChartSharp } from 'react-icons/io5';
+import { IoStatsChartSharp , IoExitOutline } from 'react-icons/io5';
 
 export const menuItems = [
     {
         id: 1,
         title: "Home",
-        name: "Home",
+        name: "/Dashboard/Home",
         icon: <HiOutlineHome className='icon' />,
     },
     {
         id: 2,
         title: "Register",
-        name: "register",
+        name: "/Dashboard/Register",
         icon: <FaUsers className='icon' />,
     },
     {
         id: 3,
         title: "Users",
-        name: "RegisterTable",
+        name: "/Dashboard/RegisterTable",
         icon: <HiOutlineUsers className='icon' />,
     },
    
@@ -27,9 +27,15 @@ export const menuItems = [
     {
         id:4,
         title: "Chart",
-        name: "Chart",
+        name: "/Dashboard/Chart",
         icon: <IoStatsChartSharp className='icon' />,
     },
+    {
+      id:4,
+      title: "logout",
+      name: "/Dashboard/Logout",
+      icon: <IoExitOutline className='icon' />,
+  },
 ]
 
 export const UsersColumns = [
