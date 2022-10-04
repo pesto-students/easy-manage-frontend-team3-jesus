@@ -1,14 +1,12 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import FormSignIn from '../../components/Form/FormSignIn'
-import Navbar from '../../components/Navbar/Navbar'
+import { Footer, Navbar, FormSignIn } from '../../components'
 
 const SignIn = () => {
   return (
     <div>
-        <Navbar/>
-        <FormSignIn/>
-        <Footer/>
+      <Navbar />
+      <FormSignIn />
+      <Footer />
     </div>
   )
 }

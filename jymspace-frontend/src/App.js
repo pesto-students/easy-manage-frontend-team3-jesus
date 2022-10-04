@@ -1,17 +1,14 @@
-import "./App.css";
-import AppRouter from "./AppRouter/AppRouter";
+import './App.css'
+import Modal from 'react-modal'
+import AppRouter from './AppRouter/AppRouter'
 
-
+Modal.setAppElement('#root')
 function App() {
   return (
-    <div className="App">
-      
-     
-      <AppRouter/>
-    
-     
+    <div className='App'>
+      <AppRouter />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

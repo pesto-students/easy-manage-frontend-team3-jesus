@@ -31,6 +31,7 @@
   justify-content: space-between;
   border: 5px solid var(--light-blue);
   border-radius: 10px;
+  transition-duration: 500ms;
 }
 
 .category:hover {
@@ -38,7 +39,7 @@
   border: 5px solid black;
 }
 
-.category> :nth-child(1) {
+.category > :nth-child(1) {
   width: 2rem;
   height: 2rem;
   fill: var(--white);
@@ -59,14 +60,14 @@
   color: var(--black);
 }
 
-.category> :nth-child(2) {
+.category > :nth-child(2) {
   font-size: 1rem;
   font-weight: bold;
   fill: var(--black);
   padding: 0.5rem 0 0.5rem 0;
 }
 
-.category> :nth-child(3) {
+.category > :nth-child(3) {
   font-size: 0.9rem;
   line-height: 25px;
 }
@@ -74,7 +75,6 @@
 @media only screen and (max-width: 1024px) {
   .category {
     display: flex;
-
   }
 
   .features-categories {

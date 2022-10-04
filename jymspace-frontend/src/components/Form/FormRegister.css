@@ -1,17 +1,11 @@
-.container-register{
-  max-width: 1000px;
-  width: 100%;
-  background-color:black;
-  padding: 25px 30px;
+.container-register {
+  background-color: black;
+  padding: 20px 30px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-  margin-left: 23rem;
-  margin-top: 2rem;
-  padding-bottom: 8rem;
-
-
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  padding-bottom: 2rem;
 }
-.container-register .title-register{
+.container-register .title-register {
   font-size: 25px;
   font-weight: 500;
   position: relative;
@@ -19,83 +13,57 @@
   color: var(--light-green);
 }
 
-.content-register form .user-details-register{
+.user-details-register {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+  width: auto;
 }
-form .user-details-register .input-box-register{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
+.button-register {
+  display: flex;
 }
-form .input-box-register span.details-register{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.user-details-register .input-box-register input{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  border: 1px solid #ccc;
-  border-bottom-width: 2px;
-  transition: all 0.3s ease;
-}
-.user-details-register .input-box-register input:focus,
-.user-details-register .input-box-register input:valid{
-  background-image: var(--light-green);
-}
- 
- 
- 
- 
- 
- form .button{
-   height: 45px;
-   margin: 35px 0;
- }
- form .button-register input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
 
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background-color: var(--light-green);
-   color: black;
- }
- form .button-register input:hover{
-  /* transform: scale(0.99); */
-  background-color: var(--white);
-  color: black;
-  }
- @media(max-width: 584px){
- .container-register{
-  max-width: 100%;
+.save-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-form .user-details-register .input-box-register{
+
+.register-error {
+  padding: 10px 0px;
+  color: red;
+}
+
+.cancel-button {
+  background-color: #ef5350;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 584px) {
+  .container-register {
+    max-width: 100%;
+  }
+  form .user-details-register .input-box-register {
     margin-bottom: 15px;
     width: 100%;
   }
- 
-  .content-register form .user-details-register{
+
+  .content-register form .user-details-register {
     max-height: 300px;
     overflow-y: scroll;
   }
-  .user-details-register::-webkit-scrollbar{
+  .user-details-register::-webkit-scrollbar {
     width: 5px;
   }
-  }
-  @media(max-width: 459px){
+}
+@media (max-width: 459px) {
   .container-register .content-register {
     flex-direction: column;
   }

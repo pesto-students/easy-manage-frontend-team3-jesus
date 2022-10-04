@@ -1,98 +1,120 @@
-
 .styled-table {
-    border-collapse: collapse;
-    margin: auto;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    max-width: 1000px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: 3px solid green;
-  }
-  
-  .styled-table thead tr {
-    background-image: var(--gradient);
-    color: #ffffff;
-    text-align: left;
-    border: 3px solid green;
+  border-collapse: collapse;
+  margin: auto;
+  width: 90%;
+  font-size: 0.9em;
+  font-family: sans-serif;
 
-  }
-  
-  .styled-table th,
-  .styled-table td {
-    padding: 12px 15px;
-   
-  }
-  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid green;
+}
 
-  
-  .styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-    border: 3px solid green;
-    
+.styled-table thead tr {
+  background-image: var(--gradient);
+  color: #ffffff;
+  text-align: left;
+  border: 3px solid green;
+}
 
-  }
-  
-  .styled-table tbody tr:nth-of-type(even) {
-    background-color: black;
-  }
-  
-  .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
-  
-  .btn-table {
-    border: none;
-    color: white;
-    padding: 5px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-   
-  }
-  
-  .btn-edit {
-    background-color: #008cba;
-  }
-  
-  .btn-delete {
-    background-color: #f44336;
-  }
-  
-  .btn-view {
-    background-color: #e7e7e7;
-    color: black;
-  }
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
 
-  .btn-role,.btn-packages,.btn-gym{
-    padding: 12px 18px;
-    font-weight: bold;
-    background-color: var(--light-green);
-    color: var(--black);
-    margin:15px 43rem;
-  }
-  .btn-gym{
-    position: fixed;
-    margin:11px 1rem;
-  }
-  .add-logout{
-    display: flex;
-  }
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  border: 3px solid green;
+}
 
-  .gym-logout{
-    position: absolute;
-    right:10px;
-    top:10px;
-    border-radius:5px;
-    padding: 12px 18px;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: var(--light-green);
-    color: var(--black);
-  }
-  .heading-center {
-    text-align: center;
-  }
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: black;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.btn-table {
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #008cba;
+}
+
+.btn-delete {
+  background-color: #f44336;
+}
+
+.btn-view {
+  background-color: #e7e7e7;
+  color: black;
+}
+
+.btn-role,
+.btn-packages,
+.btn-gym {
+  padding: 12px 18px;
+  font-weight: bold;
+  background-color: var(--light-green);
+  color: var(--black);
+  margin: 15px 43rem;
+}
+.btn-gym {
+  position: fixed;
+  margin: 11px 1rem;
+}
+.add-logout {
+  display: flex;
+}
+
+.gym-logout {
+  border-radius: 5px;
+  padding: 12px 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--light-green);
+  color: var(--black);
+}
+.heading-center {
+  text-align: center;
+}
+
+.dashboard-header {
+  display: flex;
+  padding: 0 20px;
+}
+
+.add-button-container {
+  flex: 1;
+}
+
+.add-gym-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button {
+  background-color: #ef5350;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,74 +1,99 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import axios from "axios";
-import "./GymTable.css";
-import Loader from "../Loader/Loader";
+import React, { useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import Modal from 'react-modal'
+import './GymTable.css'
+import Loader from '../Loader/Loader'
+import { Spacer } from '../Spacer'
+import { NetworkManager } from '../../Utility'
+import GymRegister from './GymRegister'
 
-const headers = [
-  "Name",
-  "Email",
-  "Address",
-  "City",
-  "State Name",
-  "Country",
-  "JymPlanId",
-  "Action",
-];
+const modalStyles = {
+  content: {
+    width: '80%',
+    position: 'relative',
+    margin: 'auto',
+    height: '80%',
+    overflow: 'hidden',
+    zIndex: 1,
+  },
+}
+
+const headers = ['Name', 'Email', 'Address', 'City', 'State Name', 'Country', 'JymPlanId', 'Action']
 
 const GymTable = () => {
-  const [loading,setLoading] = useState(true)
-  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState([])
+  const [addGym, setAddGym] = useState(false)
+  const [selectedGymId, setSelectedGymId] = useState()
 
-  const loadData = async () => {
-    const response = await axios.get(
-      "https://jymspace-api.herokuapp.com/superadmin/gym/allAccounts"
-    );
+  const loadData = useCallback(async () => {
+    const response = await NetworkManager.get('superadmin/gym/allAccounts')
     setLoading(false)
-    console.log(response.data);
-    setData(response.data);
-  };
+    setData(response.data)
+  }, [])
 
   useEffect(() => {
-    loadData();
-  }, []);
+    loadData()
 
-  const deleteContact = (id) => {
-    if (
-      window.confirm("Are you sure that you wanted to delete that contact ?")
-    ) {
-      axios.delete(
-        `https://jymspace-api.herokuapp.com/superadmin/gym/delete/${id}`
-      );
-      toast.success("Contact Deleted Successfully");
-      setTimeout(() => loadData(), 500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const onCancelGymAddOrEdit = () => {
+    setSelectedGymId()
+    setAddGym(false)
+  }
+
+  const onSave = useCallback(() => {
+    loadData()
+    setAddGym(false)
+    setSelectedGymId()
+  }, [loadData])
+
+  const deleteContact = async id => {
+    if (window.confirm('Are you sure that you wanted to delete that contact ?')) {
+      await NetworkManager.delete(`superadmin/gym/delete/${id}`)
+      toast.success('Gym Deleted Successfully')
+      setTimeout(() => loadData(), 500)
     }
-  };
+  }
 
-  if(loading) return <Loader />
-  
+  if (loading) return <Loader />
+
   return (
     <div>
-      <Link className="btn-table btn-gym" to="/GymRegister">
-        Add Gym
-      </Link>
-      <Link className="gym-logout" to="/Logout">
-        logout
-      </Link>
-
-      <table className="styled-table">
+      <Modal style={modalStyles} isOpen={selectedGymId || addGym}>
+        <GymRegister
+          onSave={onSave}
+          mode={selectedGymId ? 'edit' : 'add'}
+          onClickCancel={onCancelGymAddOrEdit}
+          id={selectedGymId}
+        />
+      </Modal>
+      <Spacer />
+      <div className='dashboard-header'>
+        <div className='add-button-container'>
+          <button onClick={() => setAddGym(true)} type='button' className='add-gym-button'>
+            Add Gym
+          </button>
+        </div>
+        <Link className='logout-button' to='/Logout'>
+          Logout
+        </Link>
+      </div>
+      <Spacer />
+      <table className='styled-table'>
         <thead>
           <tr>
-            {headers.map((header) => (
-              <th key={header} className="heading-center">
+            {headers.map(header => (
+              <th key={header} className='heading-center'>
                 {header}
               </th>
             ))}
           </tr>
         </thead>
-
         <tbody>
-          {data.map((item) => {
+          {data.map(item => {
             return (
               <tr key={item.id}>
                 <td>{item.name}</td>
@@ -79,23 +104,22 @@ const GymTable = () => {
                 <td>{item.country}</td>
                 <td>{item.JymPlanId}</td>
                 <td>
-                  <Link to={`/update/${item.id}`}>
-                    <button className="btn-table btn-edit">Edit</button>
-                  </Link>
-                  <button
-                    className="btn-table btn-delete"
-                    onClick={() => deleteContact(item.id)}
-                  >
+                  <button onClick={() => setSelectedGymId(item.id)} className='btn-table btn-edit'>
+                    Edit
+                  </button>
+                  <button className='btn-table btn-delete' onClick={() => deleteContact(item.id)}>
                     Delete
                   </button>
                 </td>
               </tr>
-            );
+            )
           })}
         </tbody>
       </table>
+      <Spacer />
+      <Spacer />
     </div>
-  );
-};
+  )
+}
 
-export default GymTable;
+export default GymTable

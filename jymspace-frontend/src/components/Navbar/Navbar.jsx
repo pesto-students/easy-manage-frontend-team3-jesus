@@ -1,29 +1,45 @@
-import React from "react";
-import "./Navbar.css";
-import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import React from 'react'
+import logo from '../../assets/logo.png'
+import { Link, useLocation } from 'react-router-dom'
+import './Navbar.css'
 
-const Navbar = () => {
-  
+const links = [
+  {
+    linkName: 'Home',
+    url: '/',
+  },
+  {
+    linkName: 'About Us',
+    url: '/AboutUs',
+  },
+  {
+    linkName: 'Contact Us',
+    url: '/contactUs',
+  },
+  {
+    linkName: 'Sign In',
+    url: '/SignIn',
+  },
+]
+
+export const Navbar = () => {
+  const location = useLocation()
   return (
-    <div className="navbar">
-      <Link to="/">
-      <img src={logo} alt="" className="logo" />
+    <div className='navbar'>
+      <Link to='/' className='links'>
+        <img src={logo} alt='Logo' className='logo' />
       </Link>
-      <ul className="navbar-menu">
-        <Link to="/" className="links">
-          Home
-        </Link>
-       
-        <Link to="/AboutUs" className='links'>About Us</Link>
-        <Link to="/contactUs" className='links'>Contact Us</Link>
-       
-        <Link  to="/SuperUser" className="links" >
-          SuperUser
-        </Link>
+      <ul className='navbar-menu'>
+        {links.map(link => (
+          <Link
+            key={link.linkName}
+            to={link.url}
+            className={`link ${location.pathname === link.url ? `link-active` : `links`}`}
+          >
+            {link.linkName}
+          </Link>
+        ))}
       </ul>
     </div>
-  );
-};
-
-export default Navbar;
+  )
+}

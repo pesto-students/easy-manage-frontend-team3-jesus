@@ -19,33 +19,23 @@
   margin-right: 2rem;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .links:hover {
   color: var(--light-blue);
   cursor: pointer;
 }
 
+.link-active {
+  color: var(--light-blue);
+  cursor: pointer;
+}
+
 .links {
-  position: relative;
-  text-decoration: none;
   color: white;
 }
 
-.links::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--light-blue);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.links:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-@media (max-width:940px){
-  
+@media (max-width: 940px) {
 }
