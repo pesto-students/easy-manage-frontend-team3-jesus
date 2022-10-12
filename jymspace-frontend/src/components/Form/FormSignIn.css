@@ -1,0 +1,81 @@
+.signIn {
+  background-image: var(--gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  padding: 100px;
+}
+.signIn-container {
+  display: flex;
+  max-width: 60vw;
+
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  background: black;
+}
+.signIn-title {
+  font-weight: 700;
+  color: var(--light-green);
+}
+
+.signIn-left {
+  flex: 1;
+  background: black;
+  transition-duration: 0.5s;
+  opacity: 1;
+  padding: 40px;
+}
+
+.signIn-right {
+  flex: 1;
+}
+
+.signIn-right img {
+  width: 100%;
+}
+
+.signIn-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-signin {
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+
+.signIn-button {
+  padding: 0.5rem 3rem;
+  outline: none;
+  color: black;
+  border-radius: 20px;
+  background: var(--light-green);
+  transition: 0.3s;
+  cursor: pointer;
+  border: 0;
+}
+
+.signIn-button:hover {
+  background: white;
+}
+
+.signIn-error {
+  padding: 10px 0px;
+  color: red;
+}
+
+@media (max-width: 750px) {
+  .modal-container {
+    max-width: 90vw;
+  }
+  .modal-right {
+    display: none;
+  }
+}

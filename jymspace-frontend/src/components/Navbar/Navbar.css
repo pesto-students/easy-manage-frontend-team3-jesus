@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  z-index: 9;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.navbar-menu {
+  position: relative;
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  color: white;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.links:hover {
+  color: var(--light-blue);
+  cursor: pointer;
+}
+
+.link-active {
+  color: var(--light-blue);
+  cursor: pointer;
+}
+
+.links {
+  color: white;
+}
+
+@media (max-width: 940px) {
+}
