@@ -38,11 +38,8 @@ Test Credentials:
     
 ## Tech Stack
 
-- Node JS
-- Express JS
-- MySQL
-- JWT
-- Sequelize
+- React JS
+- Chart JS
 
 ## Authors
 
