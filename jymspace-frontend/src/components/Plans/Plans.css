@@ -1,0 +1,101 @@
+.programs-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-top: 8vh;
+}
+
+.plans-container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+
+}
+
+.plans {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 10vh;
+  width: 100%;
+  align-items: baseline;
+}
+
+.plan {
+ 
+  margin: 8px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1.5rem;
+  width: 20rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.plan-footer {
+  position: absolute;
+  bottom: 10px;
+  height: 15vh;
+}
+
+.plan:hover {
+  background-image: var(--gradient);
+}
+
+.plan>span:nth-of-type(1) {
+  fill: var(--white);
+  width: 3rem;
+  height: 3rem;
+}
+
+.plan>span:nth-of-type(2) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.plan>span:nth-of-type(3) {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.plan>span:nth-of-type(5) {
+  font-size: 1rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.feature>img {
+  width: 2rem;
+}
+
+.btn-plans{
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  color: #000000;
+  background: #20bf55;
+  display: inline;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1rem;
+  
+  
+}
+@media only screen and (max-width: 1024px) {}
